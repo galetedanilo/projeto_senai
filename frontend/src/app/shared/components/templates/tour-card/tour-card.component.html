@@ -1,0 +1,47 @@
+<section class="tour-card">
+  <div *ngIf="this.tourCard">
+    <header class="tour-card__header">
+      <img
+        src="{{ this.tourCard.imageUri }}"
+        alt="{{ this.tourCard.country }} - {{ this.tourCard.district }}"
+      />
+    </header>
+    <div class="tour-card__content">
+      <div class="tour-card__content__contry">
+        <h3>
+          {{ this.tourCard.country }} - {{ this.tourCard.district }}
+        </h3>
+      </div>
+      <div class="tour-card__content__destination">
+        <h1>{{ this.tourCard.destination }}</h1>
+      </div>
+      <div class="tour-card__content__dates">
+        <h3>
+          {{ this.tourCard.checkIn | date: "dd/MM/yy" }} -
+          {{ this.tourCard.checkOut | date: "dd/MM/yy" }}
+        </h3>
+      </div>
+      <div class="tour-card__content__daily">
+        <h4>5 Dias - 4 Noites</h4>
+      </div>
+      <div class="tour-card__content__introduction">
+        {{ this.tourCard.introduction }}
+        <tour-card-review
+          [stars]="this.tourCard.stars"
+          [reviews]="this.tourCard.reviews"
+        ></tour-card-review>
+      </div>
+    </div>
+    <footer class="tour-card__footer">
+      <div class="tour-card__footer__monetary">
+        <h4>Valor</h4>
+        <h3>{{ this.tourCard.price | currency }}</h3>
+      </div>
+      <div class="tour-card__footer__actions">
+        <button type="submit" class="tour-card__footer__actions__button">
+          Saiba mais
+        </button>
+      </div>
+    </footer>
+  </div>
+</section>

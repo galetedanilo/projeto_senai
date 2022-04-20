@@ -1,0 +1,108 @@
+@import 'color';
+
+.tour-card {
+  background-color: #ffffff;
+  border: 2px solid #bfc4ca;
+  border-radius: 8px;
+  font-family: "Rajdhani", sans-serif;
+  margin: 5px;
+  max-width: 400px;
+
+  &:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  &__header img {
+    border-radius: 6px 6px 0 0;
+    width: 100%;
+  }
+
+  &__content {
+    padding: 40px 30px 20px;
+
+    &__contry {
+      font-size: 0.8em;
+      text-transform: uppercase;
+
+      h3 {
+        color: $tertiary-color;
+      }
+    }
+
+    &__destination {
+      font-size: 1.3em;
+      text-transform: uppercase;
+
+      h1 {
+        color: $primary-color;
+      }
+    }
+
+    &__dates {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 10px;
+      width: 100%;
+
+      h3 {
+        color: $secondary-color;
+      }
+    }
+
+    &__daily {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+
+      h4 {
+        color: $primary-color;
+      }
+    }
+
+    &__introduction {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0 20px 0;
+      text-align: justify;
+      height: 45px;      
+    }
+  }
+
+  &__footer {
+    padding: 0 30px 50px;
+    text-transform: uppercase;
+
+    &__monetary {
+      display: flex;
+      justify-content: space-between;
+
+      h3 {
+        color: $secondary-color;
+      }
+
+      h4 {
+        color: $primary-color;
+      }
+    }
+
+    &__actions {
+      padding-top: 10px;
+
+      &__button {
+        background-color: transparent;
+        border: 1px solid #ccc;
+        color: #6c717a;
+        font-weight: bold;
+        height: 3.5em;
+        margin-top: 20px;        
+        text-transform: uppercase;
+        width: 100%;
+
+        &:hover {
+          color: #ffffff;
+          cursor: pointer;
+          background-color: #32aad6;
+        }
+      }
+    }
+  }
+}

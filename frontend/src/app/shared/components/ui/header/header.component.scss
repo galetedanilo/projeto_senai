@@ -1,0 +1,65 @@
+@import "color";
+
+a {
+  color: #fff;
+}
+
+.header {
+  font-family: "Rajdhani", sans-serif;
+  width: 100%;
+
+  &__contact {
+    background-color: #f4f4f8;
+    height: 100px;
+
+    &__content {
+      margin: auto;
+      width: 80%;
+    }
+  }
+
+  &__navbar {
+    background-color: $primary_color;
+
+    &__content {
+      color: #fff;
+      display: flex;
+      margin: auto;
+      justify-content: space-between;
+      width: 80%;
+
+      h1 {
+        font-size: 2em;
+        padding: 10px;
+
+        span {
+          color: $secondary-color;
+        }
+      }
+
+      nav {
+        ul {
+          font-weight: bold;
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          text-transform: uppercase;
+
+          li {
+            float: left;
+
+            a {
+              display: block;
+              padding: 20px;
+              text-align: center;
+
+              &:hover {
+                background-color: $secondary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

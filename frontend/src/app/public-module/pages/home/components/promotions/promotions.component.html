@@ -1,0 +1,8 @@
+<section *ngIf="this.tourCardList$ | async as tourCardList; else loading">
+  <div *ngFor="let tourCard of tourCardList">
+    <tour-card [tourCard]="tourCard"></tour-card>
+  </div>
+</section>
+<ng-template #loading>
+  <tour-card-skeleton></tour-card-skeleton>
+</ng-template>

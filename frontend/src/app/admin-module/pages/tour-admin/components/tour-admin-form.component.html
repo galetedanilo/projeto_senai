@@ -1,0 +1,13 @@
+<form [formGroup]="this.formTour" (ngSubmit)="this.onSubmit()">
+  <input type="text" formControlName="imageUri" name="imageUri" id="imageUri">
+  <input type="text" formControlName="country" name="country" id="country">
+  <input type="text" formControlName="district" name="district" id="district">
+  <input type="text" formControlName="destination" name="destination" id="destination">
+  <input type="text" formControlName="description" name="description" id="description">
+  <input type="text" formControlName="introduction" name="introduction" id="introduction">
+  <input type="date" formControlName="checkIn" name="checkIn" id="checkIn">
+  <input type="date" formControlName="checkOut" name="checkOut" id="checkOut">
+  <input type="text" formControlName="price" name="price" id="price">
+  <input type="text" formControlName="promotion" name="promotion" id="promotion">
+  <input type="submit" value="Salvar" [disabled]="this.formTour.invalid">
+</form>
