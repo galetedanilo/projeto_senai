@@ -1,7 +1,7 @@
 <div class="tour-card-review">
   <div class="tour-card-review__stars">
-    <fa-icon [icon]="this.faStar" *ngFor="let star of this.starArray"></fa-icon>
-    <fa-icon [icon]="this.faStarHalf" *ngIf="this.starHalf"></fa-icon>
+    <i class="fab fa-star" *ngFor="let star of this.starArray"></i>
+    <i class="fab fa-starHalf" *ngIf="this.starHalf"></i>
   </div>
   <div class="tour-card-review__comments">
     {{ this.reviews }} Reviews

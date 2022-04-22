@@ -1,7 +1,7 @@
 @import "color";
 
 a {
-  color: #fff;
+  color: $color-004;
 }
 
 .header {
@@ -9,20 +9,50 @@ a {
   width: 100%;
 
   &__contact {
-    background-color: #f4f4f8;
+    background-color: $bg-003;
     height: 100px;
+    justify-content: space-between;
 
-    &__content {
+    &__container {
+      color: $color-001;
+      display: flex;
       margin: auto;
+      justify-content: space-between;
       width: 80%;
+
+      &__utils {
+        padding-top: 2em;
+
+        &__separator {
+          color: $color-002;
+          padding: 0 1em;
+        }
+      }
+
+      &__social__icons {
+        color: $bg-002;
+        font-size: 2em;
+        padding-top: 0.8em;
+
+        nav ul li {
+          a {
+            color: $color-001;
+            padding: 0.2em;
+          }
+
+          a:hover {
+            color: $color-002;
+          }
+        }
+      }
     }
   }
 
   &__navbar {
-    background-color: $primary_color;
+    background-color: $bg-001;
 
     &__content {
-      color: #fff;
+      color: $color-004;
       display: flex;
       margin: auto;
       justify-content: space-between;
@@ -33,28 +63,25 @@ a {
         padding: 10px;
 
         span {
-          color: $secondary-color;
+          color: $color-002;
         }
       }
 
       nav {
         ul {
           font-weight: bold;
-          list-style-type: none;
           margin: 0;
           padding: 0;
           text-transform: uppercase;
 
           li {
-            float: left;
-
             a {
               display: block;
-              padding: 20px;
+              padding: 1.3em;
               text-align: center;
 
               &:hover {
-                background-color: $secondary-color;
+                background-color: $bg-002;
               }
             }
           }
