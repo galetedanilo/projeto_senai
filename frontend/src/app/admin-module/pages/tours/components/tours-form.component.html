@@ -1,0 +1,67 @@
+<form [formGroup]="this.tourForm" (ngSubmit)="this.onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Pais</mat-label>
+    <input
+      type="text"
+      name="country"
+      id="country"
+      minlength="5"
+      maxlength="256"
+      autocomplete="off"
+      placeholder="Nome do pais"
+      formControlName="country"
+      matInput
+      required
+    />
+    <mat-hint align="start">
+      <strong>Don't disclose personal info</strong>
+    </mat-hint>
+    <mat-hint align="end">
+      {{ this.tourForm.controls["country"].value.length }} / 256
+    </mat-hint>
+    <mat-error
+      *ngIf="
+        this.tourForm.controls['country'].hasError('required') &&
+        (this.tourForm.controls['country'].dirty ||
+          this.tourForm.controls['country'].touched)
+      "
+    >
+      Email is <strong>required</strong>
+    </mat-error>
+    <mat-error *ngIf="this.tourForm.controls['country'].hasError('minlength')">
+      Tamanho <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <!-- 
+  <input type="text" formControlName="country" name="country" id="country" />
+  <input type="text" formControlName="district" name="district" id="district" />
+  <input
+    type="text"
+    formControlName="destination"
+    name="destination"
+    id="destination"
+  />
+  <input
+    type="text"
+    formControlName="description"
+    name="description"
+    id="description"
+  />
+  <input
+    type="text"
+    formControlName="introduction"
+    name="introduction"
+    id="introduction"
+  />
+  <input type="date" formControlName="checkIn" name="checkIn" id="checkIn" />
+  <input type="date" formControlName="checkOut" name="checkOut" id="checkOut" />
+  <input type="text" formControlName="price" name="price" id="price" />
+  <input
+    type="text"
+    formControlName="promotion"
+    name="promotion"
+    id="promotion"
+  /> -->
+  <input type="submit" value="Salvar" [disabled]="!this.tourForm.valid" />
+</form>

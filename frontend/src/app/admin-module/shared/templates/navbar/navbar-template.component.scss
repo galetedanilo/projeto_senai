@@ -1,0 +1,20 @@
+@import 'color';
+
+.side-navbar {
+  &__header {
+    background-color: $bg-001;
+    position: fixed;
+    width: 100%;
+
+    h1 {
+      color: $color-004;
+      font-size: 2em;
+      padding: 10px 30px;
+
+      span {
+        color: $color-002;
+      }
+    }
+  }
+  
+}

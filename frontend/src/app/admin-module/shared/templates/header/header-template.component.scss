@@ -1,0 +1,41 @@
+@import "color";
+@import "layout";
+
+a {
+  color: $color-004;
+}
+
+.header {
+  background-color: $bg-001;
+  position: fixed;
+
+  &__content {
+    color: $color-004;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+
+    &__side__navbar {
+      align-items: center;
+      display: flex;
+
+      button {
+        background-color: transparent;
+      }
+
+      h1 {
+        font-size: 2em;
+        padding: 10px;
+
+        span {
+          color: $color-002;
+        }
+      }
+    }
+
+    &__user__menu {
+      align-items: center;
+      display: flex;
+    }
+  }
+}

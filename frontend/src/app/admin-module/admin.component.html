@@ -1,1 +1,13 @@
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav class="sidenav__navbar" #drawer>
+    <app-navbar-template></app-navbar-template>
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav__content">
+    <app-header-template (showSideMenu)="drawer.toggle()"></app-header-template>
+    <div class="container-fluid content-center">
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,18 @@
+
+<button
+  mat-mini-fab
+  color="primary"
+  aria-label="User settings"
+>
+  <mat-icon>account_circle</mat-icon>
+</button>
+<mat-menu #menuSetting="matMenu" xPosition="before">
+  <button mat-menu-item (click)="onUserSettingModal()">
+    <mat-icon>fingerprint</mat-icon>
+    <span>My Account</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>exit_to_app</mat-icon>
+    <span>Logout</span>
+  </button>
+</mat-menu>

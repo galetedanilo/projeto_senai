@@ -1,0 +1,19 @@
+<header class="container-fluid content-center header">
+  <section class="container header__content">
+    <div class="header__content__side__navbar">
+      <button
+        mat-mini-fab
+        aria-label="Show side navbar"
+        (click)="this.onShowSideMenu()"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <a [routerLink]="'/admin'">
+        <h1>Travel<span>Tour</span></h1>
+      </a>
+    </div>
+    <div class="header__content__user__menu">
+      <app-user-setting-menu></app-user-setting-menu>
+    </div>
+  </section>
+</header>
